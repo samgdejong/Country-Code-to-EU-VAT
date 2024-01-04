@@ -1,4 +1,4 @@
-# Country Code Converter
+# EU Country code converter to EU VAT %
 
 [![Circle CI](https://circleci.com/gh/writecrow/country_code_converter.svg?style=shield)](https://circleci.com/gh/writecrow/country_code_converter)
 
@@ -17,33 +17,25 @@ Make your code aware of the CountryCodeConverter class via your favorite method
 
 Then pass a country code or country name into the class:
 ```php
-echo CountryCodeConverter::convert('AL');
-// Will print 'Albania'
+echo CountryCodeConverter::convert('IT');
+// Will print 'Italy'
 
-echo CountryCodeConverter::convert('ALB');
-// Will print 'Albania'
+echo CountryCodeConverter::convert('Italy');
+// Will print 'IT'
 
-echo CountryCodeConverter::convert('008');
-// Will print 'Albania'
-
-echo CountryCodeConverter::convert('Albania');
-// Will print 'AL'
-```
 
 ### Explicitly requesting return format.
 If you want a specific format returned, pass the desired format as a second
 parameter:
 
 ```php
-echo CountryCodeConverter::convert('Albania', 'name');
+echo CountryCodeConverter::convert('Italy', 'name');
 // Will print 'Albania'
 
-echo CountryCodeConverter::convert('Albania', 'two-digit');
-// Will print 'AL'
+echo CountryCodeConverter::convert('Italy', 'two-digit');
+// Will print 'IT'
 
-echo CountryCodeConverter::convert('Albania', 'three-digit');
-// Will print 'ALB'
+echo CountryCodeConverter::convert('Italy', 'VAT');
+// Will print '22'
 
-echo CountryCodeConverter::convert('Albania', 'numeric');
-// Will print '008'
 ```
